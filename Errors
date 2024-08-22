@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<math.h>
+void AbsoluteError(float true , float approx ){
+printf("Absolute Error is :%f\n",fabs(true-approx));
+}
+void RelativeError(float true , float approx ){
+printf("Relative Error is :%f\n",fabs((true-approx)/true));
+}
+
+void PercentageError(float true , float approx ){
+printf("Percentage Error is :%f\n",fabs((true-approx)/true)*100);
+}
+
+int main(){
+float true,approx;
+printf("Enter True Value:");
+scanf("%f",&true);
+printf("Enter Approx Value:");
+scanf("%f",&approx);
+AbsoluteError(true,approx);
+RelativeError(true,approx);
+
+PercentageError(true,approx);
+return 0;
+}
